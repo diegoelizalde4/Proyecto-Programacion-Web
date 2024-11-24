@@ -1,0 +1,149 @@
+/* CSS para la página Sobre Nosotros de la Clínica Vida Saludable */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #008080;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navbar .menu {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar .menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .menu ul li a:hover {
+    color: #ffeb3b;
+}
+
+.about-us {
+    margin-top: 80px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    color: #006064;
+}
+
+.about-us p {
+    font-size: 1.2em;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.about-images {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-images img {
+    width: 40%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.about-images img:hover {
+    transform: scale(1.05);
+}
+
+.location {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.location h3 {
+    font-size: 2em;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #004d40;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar .menu {
+        float: none;
+        text-align: center;
+    }
+
+    .navbar .menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .about-images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-images img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us h2 {
+        font-size: 1.8em;
+    }
+
+    .about-us p {
+        font-size: 1em;
+    }
+
+    .location h3 {
+        font-size: 1.5em;
+    }
+}

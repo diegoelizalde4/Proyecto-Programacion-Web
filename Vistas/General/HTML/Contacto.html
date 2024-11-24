@@ -1,50 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="../CSS/General.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        </style>
+    <title>Contacto - Clínica Vida Saludable</title>
+    <link rel="stylesheet" href="../CSS/Contacto.css">
+    <script src="../JS/Contacto.js" defer></script>
 </head>
 <body>
-    
-    <nav class="nav_container">
-        <div class="logo_container">
+    <header id="navbar" class="navbar">
+        <div class="logo">
+            <h1>Clínica Vida Saludable</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="Sobre_Nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="Lista_De_Doctores.html">Doctores</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Inicio_Sesion.html">Inicio de Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h2>Contáctanos</h2>
+            <p>Estamos muy felices de que nos contactes. En Clínica Vida Saludable, valoramos cada pregunta, sugerencia o comentario. Estamos aquí para brindarte la mejor atención posible.</p>
+            <form id="contact-form" class="contact-form">
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required>
             
-        </div>
-        <div class="links_container">
-            <a href="">Index</a>
-            <a href="">Contacto</a>
-            <a href="">Doctores</a>
-            <a href="">About Us</a>
-            <a href="">Faq</a>
-        </div>
-        <div class="login_container">
-            <a href="InicioSesion.html">Login</a>
-        </div>
-    </nav>
-    <footer class="footer_container">
-        <div class="Menu footer">
-            <a href="">Contacto</a>
-            <a href="">Doctores</a>
-            <a href="">About Us</a>
-            <a href="">Faq</a>
-        </div>
-        <div class="Contact">
-            <input type="text" name="" id="">
-            <input type="email" name="" id="">
-            <input type="tel" name="" id="">
-        </div>
-        <p>Derechos reservados ....</p>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone">
+            
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Clínica Vida Saludable. Todos los derechos reservados.</p>
     </footer>
-    <div>
-
-
-
-
-
 </body>
 </html>
