@@ -1,24 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Panel del Doctor - Clínica Vida Saludable</title>
+    <link rel="stylesheet" href="../CSS/Panel_P.css">
+    <script src="../JS/Panel_P.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <nav class="Navegation">
-            <a href="">Perfil</a>
-            <a href="">HorarioCitas</a>
-            <a href="">Panel Principal</a>
+    <header id="navbar" class="navbar">
+        <div class="logo">
+            <h1>Clínica Vida Saludable - Panel del Doctor</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="Panel_P.html">Panel</a></li>
+                <li><a href="../../General/HTML/Index.html">Cerrar Sesión</a></li>
+            </ul>
         </nav>
     </header>
-    <nav class="Body">
-
-
-    </nav>
+    <main>
+        <section class="calendar-section">
+            <h2>Calendario de Citas</h2>
+            <div id="calendar"></div>
+            <div id="appointments-list" class="hidden">
+                <h3>Lista de Citas Programadas</h3>
+                <ul id="appointment-details"></ul>
+            </div>
+            <div class="actions">
+                <button id="add-appointment-btn">Agregar Cita</button>
+                <button id="cancel-appointment-btn">Cancelar Cita</button>
+                <button id="add-user-btn">Agregar Usuario</button>
+            </div>
+            <div id="add-appointment-form" class="hidden">
+                <h3>Agregar Nueva Cita</h3>
+                <form id="new-appointment-form">
+                    <label for="new-user">ID de Usuario:</label>
+                    <input type="text" id="new-user" name="user" required>
+                    <label for="new-date">Fecha:</label>
+                    <input type="date" id="new-date" name="date" required>
+                    <label for="new-time">Hora:</label>
+                    <input type="time" id="new-time" name="time" required>
+                    <button type="submit">Agregar Cita</button>
+                </form>
+            </div>
+            <div id="cancel-appointment-form" class="hidden">
+                <h3>Cancelar Cita</h3>
+                <form id="cancel-appointment-search-form">
+                    <label for="cancel-date">Fecha:</label>
+                    <input type="date" id="cancel-date" name="date" required>
+                    <label for="cancel-time">Hora:</label>
+                    <input type="time" id="cancel-time" name="time" required>
+                    <button type="submit">Buscar y Cancelar</button>
+                </form>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>derechos reservados ...</p>
+        <p>&copy; 2024 Clínica Vida Saludable. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById("add-user-btn").addEventListener("click", function() {
+            window.location.href = "Registro_Usuario.html";
+        });
+    </script>
 </body>
 </html>

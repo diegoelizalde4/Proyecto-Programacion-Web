@@ -1,0 +1,184 @@
+/* CSS para el Panel del Doctor de la Clínica Vida Saludable */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #008080;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navbar .menu {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar .menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .menu ul li a:hover {
+    color: #ffeb3b;
+}
+
+.calendar-section {
+    margin-top: 80px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#appointments-list {
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#appointments-list.hidden {
+    display: none;
+}
+
+#appointment-details {
+    list-style-type: none;
+    padding: 0;
+}
+
+#appointment-details li {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+    font-size: 1em;
+    color: #333333;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions button {
+    background-color: #008080;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.actions button:hover {
+    background-color: #005f5f;
+}
+
+#add-appointment-form, #cancel-appointment-form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#add-appointment-form.hidden, #cancel-appointment-form.hidden {
+    display: none;
+}
+
+#add-appointment-form label, #cancel-appointment-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#add-appointment-form input, #cancel-appointment-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#add-appointment-form button, #cancel-appointment-form button {
+    background-color: #008080;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-appointment-form button:hover, #cancel-appointment-form button:hover {
+    background-color: #005f5f;
+}
+
+footer {
+    background-color: #004d40;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar .menu {
+        float: none;
+        text-align: center;
+    }
+
+    .navbar .menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #calendar, #appointments-list, #add-appointment-form, #cancel-appointment-form {
+        width: 90%;
+    }
+}

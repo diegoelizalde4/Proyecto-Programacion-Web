@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert("Inicio de sesión exitoso como usuario");
                 window.location.href = "../../Usuarios/HTML/Panel_P.html";
             } else {
                 alert("Error en el inicio de sesión: " + (data.message || "Error desconocido"));
@@ -80,7 +79,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             if (data.success) {
-                alert("Inicio de sesión exitoso como doctor");
+                // Guardar el ID del doctor en el almacenamiento de sesión
+                sessionStorage.setItem("doctorId", professionalId);
                 window.location.href = "../../Medicos/HTML/Panel_P.html";
             } else {
                 alert("Error en el inicio de sesión: " + (data.message || "Error desconocido"));
