@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = formData.get("email");
         const password = formData.get("password");
 
-        fetch("http://localhost/clinica_api/users.php", {
+        fetch("http://localhost/clinica_api/user_login.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
+                // Guardar el ID del usuario en el almacenamiento de sesión
+                sessionStorage.setItem("userId", data.userId);
                 window.location.href = "../../Usuarios/HTML/Panel_P.html";
             } else {
                 alert("Error en el inicio de sesión: " + (data.message || "Error desconocido"));

@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Panel del Usuario - Clínica Vida Saludable</title>
+    <link rel="stylesheet" href="../CSS/Panel_P.css">
+    <script src="../JS/Panel_P.js" defer></script>
 </head>
 <body>
-    
+    <header id="navbar" class="navbar">
+        <div class="logo">
+            <h1>Clínica Vida Saludable - Panel del Usuario</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="Panel_P.html">Panel</a></li>
+                <li><a href="Nueva_Cita.html">Cita Nueva</a></li>
+                <li><a href="../../General/HTML/Index.html">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="appointments-section">
+            <h2>Mis Citas Programadas</h2>
+            <div id="appointments-list" class="appointments-list">
+                <ul id="appointment-details"></ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Clínica Vida Saludable. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

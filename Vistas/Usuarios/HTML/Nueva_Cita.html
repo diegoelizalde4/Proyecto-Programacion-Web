@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Cita - Clínica Vida Saludable</title>
+    <link rel="stylesheet" href="../CSS/Nueva_Cita.css">
+    <script src="../JS/Nueva_Cita.js" defer></script>
+</head>
+<body>
+    <header id="navbar" class="navbar">
+        <div class="logo">
+            <h1>Clínica Vida Saludable - Nueva Cita</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="Panel_P.html">Panel</a></li>
+                <li><a href="Nueva_Cita.html">Cita Nueva</a></li>
+                <li><a href="../../General/HTML/Index.html">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="new-appointment-section">
+            <h2>Agendar Nueva Cita</h2>
+            <form id="new-appointment-form">
+                <label for="doctor-select">Seleccione Doctor:</label>
+                <select id="doctor-select" name="doctor" required>
+                    <option value="">Seleccione un doctor</option>
+                </select>
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">Hora:</label>
+                <input type="time" id="time" name="time" required>
+                <button type="submit">Agendar Cita</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Clínica Vida Saludable. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

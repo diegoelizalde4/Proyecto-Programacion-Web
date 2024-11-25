@@ -1,0 +1,91 @@
+/* CSS para la página de Registro de Médicos de la Clínica Vida Saludable */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #008080;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    z-index: 1000;
+    text-align: center;
+}
+
+.navbar .logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.register-section {
+    margin-top: 100px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.register-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-section form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.register-section form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.register-section form button {
+    background-color: #008080;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-section form button:hover {
+    background-color: #005f5f;
+}
+
+footer {
+    background-color: #004d40;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .register-section form {
+        width: 90%;
+    }
+}
